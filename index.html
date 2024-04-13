@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box"></div>
+    <div class="content">
+      <div class="header">
+        <h1>Generate a CSS Color Gradient</h1>
+      </div>
+      <div class="select-box">
+        <div>
+          <h3>Choose orientation</h3>
+        </div>
+        <div class="directions">
+          <button onclick="selectArrow(this)" data-direction="to right top" class="selected"><i class="fa fa-arrow-up degtop"
+              style="transform: rotate(30deg);"></i></button>
+          <button onclick="selectArrow(this)" data-direction="to right"> <i class="fa fa-arrow-up degtop"
+              style="transform: rotate(90deg);"></i></button>
+          <button onclick="selectArrow(this)" data-direction="to right bottom"> <i class="fa fa-arrow-up degtop"
+              style="transform: rotate(120deg);"></i></button>
+          <button onclick="selectArrow(this)" data-direction="to bottom"> <i class="fa fa-arrow-up degtop"
+              style="transform: rotate(180deg);"></i></button>
+          <button onclick="selectArrow(this)" data-direction="to left bottom"> <i class="fa fa-arrow-up degtop"
+              style="transform: rotate(210deg);"></i></button>
+          <button onclick="selectArrow(this)" data-direction="to left"> <i class="fa fa-arrow-up degtop"
+              style="transform: rotate(270deg);"></i></button>
+          <button onclick="selectArrow(this)" data-direction="to left top"> <i class="fa fa-arrow-up degtop"
+              style="transform: rotate(300deg);"></i></button>
+          <button onclick="selectArrow(this)" data-direction="to top"> <i class="fa fa-arrow-up degtop" style="transform: rotate(360deg);"></i>
+          </button>
+        
+        </div>
+      </div>
+      <div class="palette">
+        <div>
+          <h4>enter colors</h4>
+        </div>
+        <div class="color-tabs">
+          <input type="color" onchange="changeColor(this, 0)" value="#051937" style="background-color: transparent; border: none; border-radius: 50px;"> <span class="color-value" aria-disabled="true">#051937</span>
+          <input type="color" onchange="changeColor(this, 1)" value="#831547"  style="background-color: transparent; border: none; border-radius: 50px;"> <span class="color-value">#831547</span>
+          </div>
+         
+      </div>
+      <div class="function-buttons">
+      <button id="generate">Generate</button>
+      <button id="refresh">Refresh</button>
+    </div>  
+    </div>
+    <div class="textarea">
+      <h2>CSS CODE:</h2>
+      <textarea class="area" id="gradientCode"  disabled>background-image: linear-gradient(to right, #051937,  #831547);</textarea> <br> <button id="btn">Copy</button>
+    </div>
+  </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
